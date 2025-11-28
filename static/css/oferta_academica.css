@@ -1,0 +1,310 @@
+/*
+ * Archivo: /static/css/oferta_academica.css 
+ */
+:root {
+    --white: #ffffff;
+    --guinda: #a22245;
+    --guinda-principal: #8B1A3B;
+    --guinda-oscuro: #6A0D2A;
+    --guinda-claro: #A52A4F;
+}
+/* ========================================================================= */
+/* 1. CONTENEDOR PRINCIPAL Y TÍTULOS */
+/* ========================================================================= */
+
+.oferta-academica-container {
+    max-width: 1700px; 
+    width: 95%; 
+    margin: 80px auto 100px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.page-title {
+    font-family: "Bebas Neue", sans-serif;
+    /* >>> TÍTULO PRINCIPAL: Guinda medio (#8D1B43) */
+    color: #8D1B43; 
+    font-size: 3.8rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+h1::after {
+    content: "";
+    display: block;
+    width: 100px; /* Mismo ancho que quieres para la línea */
+    height: 3px;
+    background-color: var(--guinda);
+    margin: 10px auto 0 auto; /* Centra la línea */
+}
+
+.swipe-hint {
+    font-family: 'Fredoka', sans-serif;
+    /* >>> SUBTÍTULO DE PISTA: Guinda Oscuro (#883A54) - Más oscuro que el título, pero NO NEGRO */
+    color: #883A54;
+    font-size: 1.2rem;
+    margin-bottom: 60px;
+}
+
+/* ========================================================================= */
+/* 2. ESTRUCTURA DEL CARRUSEL Y FLECHAS */
+/* ========================================================================= */
+
+.carousel-wrapper {
+    position: relative;
+    display: flex; 
+    align-items: center;
+    width: 100%;
+    max-width: 1500px; 
+    margin: 0 auto;
+}
+
+.career-carousel {
+    display: flex; 
+    overflow-x: scroll; 
+    scroll-behavior: auto; 
+    gap: 30px; 
+    padding: 10px 0;
+    width: 100%;
+    flex-wrap: nowrap; 
+    -webkit-overflow-scrolling: touch; 
+}
+/* Ocultar scrollbar si es necesario (opcional) */
+.career-carousel::-webkit-scrollbar {
+    display: none;
+}
+.career-carousel {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+.carousel-nav-btn {
+    background-color: rgb(var(--guinda-principal));
+    color: rgb(var(--white));
+    border: none;
+    padding: 15px 20px;
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.2s;
+    flex-shrink: 0;
+    margin: 0 10px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1; 
+}
+
+.carousel-nav-btn:hover {
+    background-color: rgb(var(--guinda));
+    transform: scale(1.05);
+}
+
+/* ========================================================================= */
+/* 3. ESTILO DE LA TARJETA INDIVIDUAL */
+/* ========================================================================= */
+
+.career-card {
+    display: flex; 
+    flex-direction: column; 
+    flex: 0 0 calc(25% - 22.5px); 
+    max-width: calc(25% - 22.5px);
+    
+    background-color: rgb(var(--white));
+    border-radius: 10px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+    overflow: hidden; 
+    position: relative; 
+    cursor: default; 
+    flex-shrink: 0; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease, filter 0.4s ease-in-out;
+}
+
+.career-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+
+/* CAPA DE OSCURECIMIENTO */
+.card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); 
+    opacity: 0; 
+    transition: opacity 0.4s ease-in-out;
+    z-index: 10; 
+    pointer-events: none; 
+}
+
+.card-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 66.66%; 
+    overflow: hidden;
+    transition: filter 0.4s ease-in-out; 
+}
+
+.card-image-wrapper img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease-in-out; 
+}
+
+/* CONTENIDO DE TEXTO */
+.card-content {
+    background-color: rgb(var(--white));
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; 
+    border-radius: 0 0 10px 10px; 
+    position: relative; 
+    z-index: 1; 
+    transition: background-color 0.4s, filter 0.4s ease-in-out;
+}
+
+/* Subtítulo: "Técnico en" (Color Original Legible) */
+.card-subtitle {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 1rem; 
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: rgb(var(--primary)); 
+    transition: color 0.4s; 
+}
+
+/* Título de la carrera: "PROGRAMACIÓN", etc. (Color Original Legible) */
+.card-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem; 
+    margin-bottom: 10px;
+    line-height: 1.1;
+    color: rgb(var(--guinda-oscuro)); 
+    transition: color 0.4s; 
+}
+
+.card-description {
+    font-family: 'Fredoka', sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px; 
+    color: rgba(var(--guinda-oscuro), 0.9); 
+    transition: color 0.4s; 
+}
+
+/* ========================================================================= */
+/* Botón "Ver más" - ¡FORZADO CON COLORES HEXADECIMALES! */
+/* ========================================================================= */
+
+.career-card .read-more-btn { 
+    position: absolute; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    width: 60%; 
+    height: 50px;
+    
+    /* COLORES FUERTES: Fondo Guinda (#883A54) y Texto BLANCO (#FFFFFF) */
+    background-color: #883A54 !important; 
+    color: #FFFFFF !important; 
+    
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.4rem; 
+    cursor: pointer;
+
+    opacity: 0; 
+    transition: opacity 0.4s ease-in-out, background-color 0.3s, transform 0.3s; 
+    z-index: 12; 
+}
+
+.career-card .read-more-btn:hover {
+    background-color: rgb(var(--secondary)) !important;
+    transform: translate(-50%, -50%) scale(1.05); 
+}
+
+/* ========================================================================= */
+/* 4. EFECTOS HOVER (Tarjeta Completa Blurreada y Texto Blanco/Sombreado) */
+/* ========================================================================= */
+
+/* CLAVE: Aplicar blur y oscurecimiento a la imagen */
+.career-card:hover .card-image-wrapper {
+    filter: blur(5px) brightness(0.7); 
+}
+/* CLAVE: Aplicar blur y oscurecimiento al área de texto */
+.career-card:hover .card-content {
+    filter: blur(5px) brightness(0.7); 
+    background-color: rgba(var(--white), 0.2); 
+}
+
+.career-card:hover .card-overlay {
+    opacity: 1; 
+}
+
+/* CLAVE: Botón con colores invertidos - CORREGIDO */
+.career-card:hover .read-more-btn {
+    opacity: 1; 
+    background-color: #FFFFFF !important; /* Fondo blanco sólido */
+    color: var(--guinda-principal) !important; /* Texto guinda */
+    border: 2px solid #FFFFFF !important; /* Borde blanco */
+}
+
+.career-card:hover .read-more-btn:hover {
+    background-color: var(--guinda-principal) !important; /* Fondo guinda sólido */
+    color: #FFFFFF !important; /* Texto blanco */
+    border: 2px solid var(--guinda-principal) !important; /* Borde guinda */
+}
+
+/* CLAVE: Todo el texto blanco con sombra fuerte */
+.career-card:hover .card-subtitle,
+.career-card:hover .card-title,
+.career-card:hover .card-description {
+    color: #FFFFFF; 
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.9); 
+    z-index: 13; 
+    position: relative; 
+}
+
+/* ========================================================================= */
+/* 5. RESPONSIVE */
+/* ========================================================================= */
+
+@media (max-width: 1200px) {
+    .career-card {
+        flex: 0 0 calc(33.33% - 20px); 
+        max-width: calc(33.33% - 20px);
+    }
+}
+
+@media (max-width: 900px) {
+    .career-card {
+        flex: 0 0 calc(50% - 15px); 
+        max-width: calc(50% - 15px);
+    }
+}
+
+@media (max-width: 600px) {
+    .career-card {
+        flex: 0 0 calc(100% - 30px); 
+        max-width: calc(100% - 30px);
+    }
+}

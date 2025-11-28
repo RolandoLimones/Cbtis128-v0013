@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+:root {
+    --white: #ffffff;
+    --guinda: #a22245;
+    --guinda-principal: #8B1A3B;
+    --guinda-oscuro: #6A0D2A;
+    --guinda-claro: #A52A4F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    color: var(--guinda-oscuro);
+    line-height: 1.6;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.contenedor-principal {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 60px 0 50px 0;
+    letter-spacing: 2px;
+    color: var(--guinda);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100px; /* Mismo ancho que quieres para la línea */
+    height: 3px;
+    background-color: var(--guinda);
+    margin: 10px auto 0 auto; /* Centra la línea */
+}
+
+.seccion {
+    padding: 4rem 2rem;
+    margin-bottom: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.seccion-reposicion {
+    background-color: var(--guinda-claro);
+    color: var(--white);
+}
+
+.seccion-renovacion {
+    background-color: var(--guinda-principal);
+    color: var(--white);
+}
+
+.seccion-nota {
+    background-color: var(--guinda-oscuro);
+    color: var(--white);
+}
+
+h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+}
+
+p {
+    margin-bottom: 1.2rem;
+    font-size: 1.1rem;
+}
+
+ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.8rem;
+    font-size: 1.1rem;
+}
+
+.contenido-seccion {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.texto-seccion {
+    flex: 1;
+    min-width: 300px;
+    padding-right: 2rem;
+}
+
+.imagen-seccion {
+    flex: 0 0 auto;
+    max-width: 300px;
+    text-align: center;
+    margin-left: 2rem;
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.imagen-seccion.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.imagen-seccion img {
+    max-width: 100%;
+    height: auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Estilo específico para la sección de renovación */
+.seccion-renovacion .texto-seccion {
+    order: 2;
+    padding-right: 0;
+    padding-left: 2rem;
+}
+
+.seccion-renovacion .imagen-seccion {
+    order: 1;
+    margin-left: 0;
+    margin-right: 2rem;
+    transform: translateX(-20px); /* Animación desde la izquierda */
+}
+
+.seccion-renovacion .imagen-seccion.visible {
+    transform: translateX(0);
+}
+
+/* Animación para elementos de lista */
+.lista-animada li {
+    opacity: 0;
+    transform: translateX(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.lista-animada li.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Estilo para la nota importante - ajustado según especificaciones */
+.nota-destacada {
+    background-color: var(--guinda);
+    border-left: 8px solid var(--white);
+    padding: 2.5rem;
+    margin: 2rem 0;
+    border-radius: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    max-width: 100%;
+    width: 100%;
+    text-align: left;
+    color: var(--white);
+}
+
+.nota-destacada h4 {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-bottom: 1.5rem;
+    text-align: left;
+    font-weight: 600;
+    font-family: "Oswald", sans-serif;
+}
+
+.nota-destacada p {
+    color: var(--white);
+    font-size: 1.2rem;
+    text-align: left;
+    margin-bottom: 0;
+    line-height: 1.7;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenido-seccion {
+        flex-direction: column;
+    }
+            
+    .texto-seccion {
+        padding-right: 0;
+        padding-left: 0;
+        margin-bottom: 2rem;
+    }
+            
+    .imagen-seccion {
+        order: -1;
+        margin-bottom: 1.5rem;
+        margin-left: 0;
+        margin-right: 0;
+    }
+            
+    .seccion-renovacion .texto-seccion,
+    .seccion-renovacion .imagen-seccion {
+        order: unset;
+    }
+            
+    h2 {
+        font-size: 2rem;
+    }
+            
+    h3 {
+        font-size: 1.5rem;
+    }
+            
+    .seccion {
+        padding: 2.5rem 1.5rem;
+    }
+            
+    .nota-destacada {
+        padding: 1.8rem;
+        margin: 1.5rem 0;
+    }
+            
+    .nota-destacada h4 {
+        font-size: 1.5rem;
+    }
+            
+    .nota-destacada p {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    h2 {
+        font-size: 1.8rem;
+    }
+            
+    h3 {
+        font-size: 1.3rem;
+    }
+            
+    .seccion {
+        padding: 2rem 1rem;
+    }
+            
+    .nota-destacada {
+        padding: 1.5rem;
+        border-left: 6px solid var(--white);
+    }
+            
+    .nota-destacada h4 {
+        font-size: 1.3rem;
+    }
+            
+    .nota-destacada p {
+        font-size: 1rem;
+    }
+}

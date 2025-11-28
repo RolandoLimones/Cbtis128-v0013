@@ -1,0 +1,211 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+:root {
+    --white: #ffffff;
+    --guinda: #a22245;
+    --guinda-principal: #8B1A3B;
+    --guinda-oscuro: #6A0D2A;
+    --guinda-claro: #A52A4F;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--white);
+    color: #333;
+    line-height: 1.6;
+    font-family: 'Fredoka', sans-serif;
+}
+
+.contenedor-principal {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    font-family: "Bebas Neue", sans-serif;
+    text-align: center;
+    font-size: 3.5rem;
+    margin: 60px 0 50px 0;
+    letter-spacing: 2px;
+    color: var(--guinda);
+}
+
+h2::after {
+    content: "";
+    display: block;
+    width: 100px; /* Mismo ancho que quieres para la línea */
+    height: 3px;
+    background-color: var(--guinda);
+    margin: 10px auto 0 auto; /* Centra la línea */
+}
+
+.seccion {
+    width: 100%;
+    padding: 60px 0;
+    margin: 0;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.seccion-procedimiento {
+    background-color: var(--guinda-principal);
+    color: var(--white);
+}
+
+.seccion-nota-horario {
+    background-color: var(--guinda-oscuro);
+    color: var(--white);
+}
+
+.contenedor-contenido {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.contenedor-texto {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+}
+
+h3 {
+    color: var(--white);
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    font-family: "Oswald", sans-serif;
+}
+        
+h4 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+    font-family: "Oswald", sans-serif;
+}
+
+.contenedor-texto ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.contenedor-texto li {
+    margin-bottom: 10px;
+}
+
+.contenedor-imagen {
+    flex: 1;
+    min-width: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen-seccion {
+    width: 100%;
+    max-width: 400px;
+    height: 300px;
+    object-fit: cover;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: opacity 0.6s ease, transform 0.6s ease;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.imagen-seccion.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.contenedor-nota-horario {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.cuadro-nota, .cuadro-horario {
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    position: relative;
+    text-align: left;
+}
+
+.cuadro-nota {
+    background-color: var(--guinda-claro);
+    color: var(--white);
+    border-left: 5px solid var(--white);
+}
+
+.cuadro-horario {
+    background-color: var(--guinda-claro);
+    color: var(--white);
+    border-left: 5px solid var(--white);
+}
+
+.lista-animada {
+    opacity: 1;
+}
+
+.lista-animada li {
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.lista-animada li.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .contenedor-contenido {
+        flex-direction: column;
+    }
+            
+    .contenedor-imagen {
+        order: 2;
+    }
+            
+    .contenedor-texto {
+        order: 1;
+    }
+            
+    h2 {
+        font-size: 2rem;
+    }
+            
+    h3 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .seccion {
+        padding: 40px 0;
+    }
+            
+    .contenedor-texto {
+        padding: 15px;
+    }
+            
+    h2 {
+        font-size: 1.8rem;
+    }
+}
