@@ -1,0 +1,296 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+    <link rel="stylesheet" href="{% static 'css/oferta_academica.css' %}">
+{% endblock %}
+
+{% block content %}
+    
+    <div class="oferta-academica-container">
+        <h1 class="page-title">OFERTA ACADÉMICA</h1>
+        
+        <p class="swipe-hint">Desliza y toca las tarjetas para conocer más información</p>
+
+        <div class="carousel-wrapper">
+            <button class="carousel-nav-btn prev">&lt;</button>
+            
+            <div class="career-carousel">
+                
+                {# GRUPO ORIGINAL DE TARJETAS #}
+                <div class="career-card" data-original="true">
+                    <div class="card-overlay"></div> 
+                    <div class="card-image-wrapper">
+                        <img src="{% static 'imagenes/oferta_academica/administracion.jpeg' %}" alt="Administración de Recursos Humanos">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-subtitle">Técnico en</span>
+                        <h2 class="card-title">ADMINISTRACIÓN DE RECURSOS HUMANOS</h2>
+                        <p class="card-description">Ofrecemos las competencias profesionales que permiten al estudiante gestionar trámites administrativos, integrar el talento humano y manejar nómina y compensaciones.</p>
+                    </div>
+                    <a href="https://cosfac.sems.gob.mx/Programas_presenciales/2023/PROGRAMA_DE_ESTUDIOS_ADMINISTRACION_DE_RECURSOS_HUMANOS.pdf" class="read-more-btn" target="_blank">VER MÁS</a>
+                </div>
+
+                <div class="career-card" data-original="true">
+                    <div class="card-overlay"></div>
+                    <div class="card-image-wrapper">
+                        <img src="{% static 'imagenes/oferta_academica/electronica.jpeg' %}" alt="Electrónica">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-subtitle">Técnico en</span>
+                        <h2 class="card-title">ELECTRÓNICA</h2>
+                        <p class="card-description">Ofrecemos las competencias profesionales que permiten al estudiante aplicar dispositivos y sistemas electrónicos compactos y eficientes, que están presentes en todos los ámbitos del ser humano.</p>
+                    </div>
+                    <a href="https://cosfac.sems.gob.mx/Programas_presenciales/2023/PROGRAMA_DE_ESTUDIO_ELECTRONICA.pdf" class="read-more-btn" target="_blank">VER MÁS</a>
+                </div>
+
+                <div class="career-card" data-original="true">
+                    <div class="card-overlay"></div>
+                    <div class="card-image-wrapper">
+                        <img src="{% static 'imagenes/oferta_academica/gericultura.jpeg' %}" alt="Gericultura">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-subtitle">Técnico en</span>
+                        <h2 class="card-title">GERICULTURA</h2>
+                        <p class="card-description">Ofrecemos las competencias profesionales que permiten al estudiante brindar atención integral a la población adulta mayor, asistiendo en su autocuidado y rehabilitación.</p>
+                    </div>
+                    <a href="https://cosfac.sems.gob.mx/Programas_presenciales/2025/GERICULTURA_010825.pdf" class="read-more-btn" target="_blank">VER MÁS</a>
+                </div>
+
+                <div class="career-card" data-original="true">
+                    <div class="card-overlay"></div>
+                    <div class="card-image-wrapper">
+                        <img src="{% static 'imagenes/oferta_academica/IA.jpeg' %}" alt="Inteligencia Artificial">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-subtitle">Técnico en</span>
+                        <h2 class="card-title">INTELIGENCIA ARTIFICIAL</h2>
+                        <p class="card-description">Ofrecemos las competencias profesionales que permiten al estudiante aplicar técnicas de representación del conocimiento y procesamiento de información en diversos contextos.</p>
+                    </div>
+                    <a href="https://cosfac.sems.gob.mx/Programas_presenciales/2024/INTELIGENCIA_ARTIFICIAL1.pdf" class="read-more-btn" target="_blank">VER MÁS</a>
+                </div>
+
+                <div class="career-card" data-original="true">
+                    <div class="card-overlay"></div>
+                    <div class="card-image-wrapper">
+                        <img src="{% static 'imagenes/oferta_academica/quimica.jpeg' %}" alt="Laboratorista Químico">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-subtitle">Técnico en</span>
+                        <h2 class="card-title">LABORATORISTA QUÍMICO</h2>
+                        <p class="card-description">Ofrecemos las competencias profesionales que permiten al estudiante realizar operaciones básicas de laboratorio, análisis de muestras y aplicación de tratamientos de saneamiento.</p>
+                    </div>
+                    <a href="https://cosfac.sems.gob.mx/Programas_presenciales/2025/LABORATORISTA%20QUIMICO.pdf" class="read-more-btn" target="_blank">VER MÁS</a>
+                </div>
+
+                <div class="career-card" data-original="true">
+                    <div class="card-overlay"></div>
+                    <div class="card-image-wrapper">
+                        <img src="{% static 'imagenes/oferta_academica/programacion.jpeg' %}" alt="Programación">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-subtitle">Técnico en</span>
+                        <h2 class="card-title">PROGRAMACIÓN</h2>
+                        <p class="card-description">Ofrecemos las competencias profesionales que permiten al estudiante desarrollar software de sistemas informáticos, administrar bases de datos y desarrollar aplicaciones web y móviles.</p>
+                    </div>
+                    <a href="https://cosfac.sems.gob.mx/Programas_presenciales/2023/PROGRAMA%20DE%20ESTUDIOS%20PROGRAMACION.pdf" class="read-more-btn" target="_blank">VER MÁS</a>
+                </div>
+
+                <div class="career-card" data-original="true">
+                    <div class="card-overlay"></div>
+                    <div class="card-image-wrapper">
+                        <img src="{% static 'imagenes/oferta_academica/soporte.jpeg' %}" alt="Soporte de Equipo de Cómputo">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-subtitle">Técnico en</span>
+                        <h2 class="card-title">SOPORTE DE EQUIPO DE CÓMPUTO</h2>
+                        <p class="card-description">Ofrecemos las competencias profesionales que permiten al estudiante realizar operaciones de soporte y mantenimiento a equipos de cómputo de manera presencial y a distancia, e instalar redes LAN.</p>
+                    </div>
+                    <a href="https://cosfac.sems.gob.mx/Docentes/Programas_de_estudio_del_Bachillerato_Tecnologico_Formacion_Profesional/Programas_de_estudio_de_ED_2022/DGETI/Soporte_y_mantenimiento_de_equipo_de_cómputo.pdf" class="read-more-btn" target="_blank">VER MÁS</a>
+                </div>
+            </div>
+            
+            <button class="carousel-nav-btn next">&gt;</button>
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block extra_js %}
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const carousel = document.querySelector(".career-carousel");
+    const prevBtn = document.querySelector(".carousel-nav-btn.prev");
+    const nextBtn = document.querySelector(".carousel-nav-btn.next");
+
+    let originalCards = Array.from(
+        carousel.querySelectorAll('.career-card[data-original="true"]')
+    );
+
+    const numOriginal = originalCards.length;
+    // Asumimos 4 clones por lado ya que el CSS muestra 4 tarjetas
+    const numClones = 4; 
+
+    /* ============================================================
+     1. CLONAR TARJETAS (Doble Clonación)
+     ============================================================ */
+    // Últimas 4 tarjetas al inicio
+    const clonesStart = originalCards.slice(-numClones).map(c => c.cloneNode(true));
+    // Primeras 4 tarjetas al final
+    const clonesEnd = originalCards.slice(0, numClones).map(c => c.cloneNode(true));
+
+    clonesStart.reverse().forEach(clone => {
+        clone.dataset.original = "false";
+        carousel.insertBefore(clone, carousel.firstElementChild);
+    });
+
+    clonesEnd.forEach(clone => {
+        clone.dataset.original = "false";
+        carousel.appendChild(clone);
+    });
+
+    /* ============================================================
+     2. CALCULOS INICIALES (Ancho de tarjeta + gap)
+     ============================================================ */
+    let scrollSize = 0;
+    let initialPos = 0;
+    let fullOriginalWidth = 0;
+
+    function calculate() {
+        // Obtenemos la primera tarjeta del grupo original (después de los clones)
+        const firstOriginal = carousel.children[numClones];
+        if (!firstOriginal || !firstOriginal.nextElementSibling) return;
+
+        // Utilizamos getBoundingClientRect para medir con precisión el ancho de desplazamiento
+        const rect1 = firstOriginal.getBoundingClientRect();
+        const rect2 = firstOriginal.nextElementSibling.getBoundingClientRect();
+        
+        // La diferencia de `left` es el ancho de la tarjeta MÁS el gap.
+        scrollSize = rect2.left - rect1.left;
+
+        // La posición inicial es donde comienza el primer grupo original
+        initialPos = scrollSize * numClones;
+        // El ancho completo del grupo original
+        fullOriginalWidth = scrollSize * numOriginal;
+    }
+
+    calculate();
+
+    // Posicionar el carrusel en el inicio LÓGICO (después de los clones iniciales)
+    requestAnimationFrame(() => {
+        carousel.scrollLeft = initialPos;
+    });
+
+    /* ============================================================
+     3. MOVIMIENTO DE BOTONES (Con bloqueo de spam)
+     ============================================================ */
+    let isMoving = false;
+
+    function move(direction) {
+        if (isMoving) return;
+        isMoving = true;
+
+        const target =
+            direction === "next"
+                ? carousel.scrollLeft + scrollSize
+                : carousel.scrollLeft - scrollSize;
+
+        carousel.scrollTo({ left: target, behavior: "smooth" });
+
+        // Bloqueo temporal para evitar clics múltiples durante la animación
+        setTimeout(() => (isMoving = false), 350); 
+    }
+
+    /* ============================================================
+     4. RESETEO INVISIBLE PARA LOOP INFINITO (El alma del carrusel)
+     ============================================================ */
+    carousel.addEventListener("scroll", () => {
+        const x = carousel.scrollLeft;
+        const tolerance = 5; // Margen de error
+
+        // Detectar si pasamos la última tarjeta original (estamos en los clones finales)
+        if (x >= initialPos + fullOriginalWidth - tolerance) {
+            // Saltar instantáneamente al inicio LÓGICO
+            carousel.scrollLeft = x - fullOriginalWidth;
+        } 
+        // Detectar si pasamos la primera tarjeta original (estamos en los clones iniciales)
+        else if (x <= initialPos - scrollSize + tolerance) {
+            // Saltar instantáneamente al final LÓGICO
+            carousel.scrollLeft = x + fullOriginalWidth;
+        }
+    });
+
+    prevBtn.addEventListener("click", () => move("prev"));
+    nextBtn.addEventListener("click", () => move("next"));
+
+    /* ============================================================
+     5. SWIPE EN MÓVIL (TOUCH) + INERCIA
+     ============================================================ */
+    let startX = 0;
+    let lastX = 0;
+    let lastMoveTime = 0;
+    let velocity = 0;
+    let isTouching = false;
+
+    carousel.addEventListener("touchstart", (e) => {
+        isTouching = true;
+        startX = e.touches[0].clientX;
+        lastX = startX;
+        lastMoveTime = Date.now();
+        velocity = 0;
+        clearInterval(autoplay); // Detener Autoplay al tocar
+    });
+
+    carousel.addEventListener("touchmove", (e) => {
+        if (!isTouching) return;
+
+        const currentX = e.touches[0].clientX;
+        const delta = lastX - currentX;
+        carousel.scrollLeft += delta;
+
+        const now = Date.now();
+        const dt = now - lastMoveTime;
+        velocity = (currentX - lastX) / dt;
+
+        lastX = currentX;
+        lastMoveTime = now;
+    });
+
+    carousel.addEventListener("touchend", () => {
+        isTouching = false;
+
+        let momentum = velocity * 100;
+
+        function inertia() {
+            if (Math.abs(momentum) < 0.5) return;
+
+            carousel.scrollLeft -= momentum;
+            momentum *= 0.92;
+
+            requestAnimationFrame(inertia);
+        }
+
+        inertia();
+    });
+
+    /* ============================================================
+     6. AUTOPLAY 
+     ============================================================ */
+    let autoplayDelay = 4500; 
+    let autoplay = setInterval(() => move("next"), autoplayDelay);
+
+    // Reiniciar autoplay al terminar de mover
+    carousel.addEventListener("touchend", () => {
+        clearInterval(autoplay);
+        autoplay = setInterval(() => move("next"), autoplayDelay);
+    });
+    
+    // Detener autoplay en hover (solo escritorio)
+    carousel.addEventListener("mouseenter", () => clearInterval(autoplay));
+    carousel.addEventListener("mouseleave", () => {
+        clearInterval(autoplay);
+        autoplay = setInterval(() => move("next"), autoplayDelay);
+    });
+});
+</script>
+{% endblock %}
